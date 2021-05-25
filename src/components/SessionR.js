@@ -15,8 +15,8 @@ const SessionR = ({ onClose, results, data, }) => {
                         <li key={i} className="mb-6">
                             <p><strong>{result.q}</strong></p>
                             <p className={result.a === data[i].answer ? 'has-background-success has-text-white p-2' : 'has-background-danger has-text-white p-2'
-                                }>Vos réponses : {result.a}</p>
-                            {result.a !== data[i].answer && <p className="has-background-link has-text-white p-2">Correct Answer : {data[i].answer}</p>}
+                                }>Votre réponse : {result.a}</p>
+                            {result.a !== data[i].answer && <p className="has-background-link has-text-white p-2">Bonne réponse : {data[i].answer}</p>}
                         </li>
                         ))}
                     </ul>
