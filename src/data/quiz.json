@@ -1,0 +1,19 @@
+{
+    "data": [
+      {
+        "question": "Est-ce que Brad Pitt a joué dans Titanic ?",
+        "choices": ["Oui", "Non"],
+        "answer": "Non"
+      },
+      {
+        "question": "Est-ce que James Cameron a réalisé Avatar",
+        "choices": ["Oui", "Non"],
+        "answer": "Oui"
+      },
+      {
+        "question": "Est-ce que le film Avenger fait partie de la MCU",
+        "choices": ["Oui", "Non"],
+        "answer": "Oui"
+      }
+    ]
+  }
