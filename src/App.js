@@ -4,6 +4,7 @@ import './App.css';
 import Start from './components/Start';
 import Questions from './components/Questions';
 import GameOver from './components/GameOver';
+import SessionR from './components/SessionR';
 import quizData from './data/quiz.json'; /*à modifier*/
 
 let interval; 
@@ -13,6 +14,7 @@ const App = () => {
   const [step, setStep] = useState(1);
   const [activeQuestion, setActiveQuestion] =useState(0);
   const [answers, setAnswer] = useState([]);
+  const [showSessionR, setShowSessionR] = useState(false);
   const [time, setTime] = useState(0); 
 
   useEffect(() => {
@@ -54,8 +56,14 @@ const App = () => {
       results={answers}
       data={quizData.data}
       onReset={resetClickHandler}
-      onAnswerCheck={() => {}}
+      onAnswerCheck={() => setShowSessionR (true)}
       time={time}
+      />}
+
+    {showSessionR && <SessionR
+      onClose={() => setShowSessionR(false)}
+      results={answers}
+      data={quizData.data}
       />}
     </div>
   );
